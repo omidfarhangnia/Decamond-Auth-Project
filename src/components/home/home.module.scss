@@ -8,7 +8,7 @@
   justify-content: center;
   .header {
     font-size: clamp(32px, 30px + 3vw, 72px);
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    font-family: var(--font-names),
       sans-serif;
     margin-bottom: 20px;
   }
@@ -20,7 +20,7 @@
     .links {
       text-decoration: none;
       font-size: clamp(16px, 25px + 1vw, 30px);
-      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
+      font-family: var(--font-names);
       color: #ffffff;
       background: var(--primary);
       padding: 10px 20px;
