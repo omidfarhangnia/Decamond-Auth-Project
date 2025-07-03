@@ -2,13 +2,23 @@
 
 import styles from "@/components/form/form.module.scss";
 import { useRouter } from "next/navigation";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import Button from "../button/button";
+import Input from "../input/input";
 
 export default function Form() {
   const [tel, setTel] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const router = useRouter();
+
+  useEffect(() => {
+    const user = localStorage.getItem("user");
+
+    if (user) {
+      router.push("/dashboard");
+    }
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -46,33 +56,15 @@ export default function Form() {
     <div className={styles.container}>
       <h1 className={styles.header}>احراز هویت</h1>
       <form className={styles.form} onSubmit={handleSubmit}>
-        <div className={styles.inputContainer}>
-          <input
-            id="tel"
-            required
-            className={styles.input}
-            type="tel"
-            value={tel}
-            disabled={loading}
-            placeholder="09123456789"
-            onChange={(e) => setTel(e.target.value)}
-          />
-          <label className={styles.label} htmlFor="tel">
-            شماره تلفن
-          </label>
-        </div>
+        <Input tel={tel} loading={loading} setTel={setTel} />
         <p className={styles.errorMessage}>{error}</p>
-        <input
-          className={styles.submitBtn}
-          type="submit"
-          value={loading ? "در حال ثبت" : "ثبت"}
-        />
+        <Button loading={loading} />
       </form>
     </div>
   );
 }
 
 function isTelValid(tel: string): boolean {
-  const telRegex = /^(\+98|0)?9\d{9}$/;
+  const telRegex = /^(98|0)?9\d{9}$/;
   return telRegex.test(tel);
 }

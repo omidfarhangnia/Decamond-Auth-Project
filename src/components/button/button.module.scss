@@ -1,0 +1,24 @@
+.submitBtn {
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  padding-block: 10px;
+  background: var(--primary);
+  color: var(--background);
+  font-size: 20px;
+  font-family: var(--font-names);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  &:disabled {
+    opacity: 60%;
+  }
+
+  &:hover {
+    transform: scale(1.02);
+  }
+  
+  @media (min-width: 768px) {
+    font-size: 32px;
+    padding-block: 20px;
+  }
+}

@@ -1,5 +1,5 @@
-export default function Page()  {
-    return (
-        <div>you are in dashboard</div>
-    )
+import Welcome from "@/components/welcome/welcome";
+
+export default function Page() {
+  return <Welcome />;
 }

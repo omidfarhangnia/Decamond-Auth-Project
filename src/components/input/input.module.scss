@@ -1,0 +1,31 @@
+.inputContainer {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: space-between;
+  .input {
+    width: clamp(140px, 40%, 400px);
+    height: 40px;
+    border-radius: 10px;
+    border: solid 1px var(--primary);
+    padding: 0 10px;
+    font-size: 16px;
+    font-family: var(--font-names);
+  }
+  .label {
+    font-size: 20px;
+    font-family: var(--font-names);
+    color: var(--primary);
+  }
+
+  @media (min-width: 768px) {
+    width: 100%;
+    .input {
+      width: 50%;
+      height: 50px;
+    }
+    .label {
+      font-size: 30px;
+    }
+  }
+}

@@ -24,47 +24,6 @@
     align-items: center;
     max-width: 700px;
 
-    .inputContainer {
-      display: flex;
-      gap: 15px;
-      align-items: center;
-      justify-content: space-between;
-      .input {
-        width: clamp(140px, 40%, 400px);
-        height: 40px;
-        border-radius: 10px;
-        border: solid 1px var(--primary);
-        padding: 0 10px;
-        font-size: 16px;
-        font-family: var(--font-names);
-      }
-      .label {
-        font-size: 20px;
-        font-family: var(--font-names);
-        color: var(--primary);
-      }
-    }
-
-    .submitBtn {
-      width: 100%;
-      border-radius: 10px;
-      border: none;
-      padding-block: 10px;
-      background: var(--primary);
-      color: var(--background);
-      font-size: 20px;
-      font-family: var(--font-names);
-      cursor: pointer;
-      transition: all 0.3s ease-in-out;
-      &:disabled {
-        display: none;
-      }
-
-      &:hover {
-        transform: scale(1.02);
-      }
-    }
-
     .errorMessage {
       font-size: clamp(14px, 2vw, 18px);
       text-align: right;
@@ -80,21 +39,6 @@
     gap: 50px;
     .form {
       width: 50%;
-      .inputContainer {
-        width: 100%;
-        .input {
-          width: 50%;
-          height: 50px;
-        }
-        .label {
-          font-size: 30px;
-        }
-      }
-
-      .submitBtn {
-        font-size: 32px;
-        padding-block: 20px;
-      }
     }
   }
 }
