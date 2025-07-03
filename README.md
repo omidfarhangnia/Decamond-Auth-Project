@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# پروژه احراز هویت (Decamond Auth Project)
 
-## Getting Started
+این پروژه یک سیستم احراز هویت ساده است که به عنوان بخشی از یک تسک فنی پیاده‌سازی شده است. هدف اصلی، نمایش مهارت در استفاده از Next.js (App Router), TypeScript, و SCSS Modules برای ساخت یک برنامه وب مدرن و واکنش‌گرا است.
 
-First, run the development server:
+این برنامه شامل یک صفحه ورود است که شماره تلفن کاربر را اعتبارسنجی کرده و پس از آن با فراخوانی یک API عمومی، یک جلسه (Session) برای کاربر ایجاد کرده و او را به صفحه داشبورد محافظت‌شده هدایت می‌کند.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ ویژگی‌ها (Features)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+-   **صفحه ورود (`/auth`):** فرم ورود با اعتبارسنجی شماره تلفن ایران.
+-   **شبیه‌سازی احراز هویت:** فراخوانی API از `randomuser.me` برای دریافت اطلاعات کاربر.
+-   **مدیریت جلسه:** ذخیره وضعیت ورود کاربر در `localStorage` مرورگر.
+-   **صفحه داشبورد محافظت‌شده (`/dashboard`):** صفحه‌ای که فقط برای کاربران وارد شده قابل دسترس است.
+-   **ریدایرکت خودکار:** هدایت کاربران وارد نشده به صفحه ورود.
+-   **طراحی واکنش‌گرا (Responsive):** ظاهر بهینه در دستگاه‌های موبایل و دسکتاپ.
+-   **کامپوننت‌های قابل استفاده مجدد:** کامپوننت‌های جداگانه برای `Button` و `Input`.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🛠️ تکنولوژی‌های استفاده شده (Tech Stack)
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+-   **Next.js** - (App Router)
+-   **React**
+-   **TypeScript**
+-   **Sass/SCSS** - (CSS Modules)
